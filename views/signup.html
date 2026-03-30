@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Signup - HelpFromHumans</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - HelpFromHumans</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Signup</h1>
-    <form action="/signup" method="POST">
-        <input type="text" name="username" placeholder="Username" required><br>
-        <input type="email" name="email" placeholder="Email" required><br>
-        <input type="password" name="password" placeholder="Password" required><br>
-        <button type="submit">Signup</button>
-    </form>
-    <a href="/login">Already have an account? Login</a>
+  <!-- Signup Form Container -->
+  <div class="form-container">
+    <div class="form-card">
+      <h2>Sign Up</h2>
+      <form action="/signup" method="POST">
+        <input type="text" name="username" placeholder="Username" class="form-input" required>
+        <input type="email" name="email" placeholder="Email" class="form-input" required>
+        <input type="password" name="password" placeholder="Password" class="form-input" required>
+        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="/login" class="link">Login</a></p>
+    </div>
+  </div>
 </body>
 </html>
