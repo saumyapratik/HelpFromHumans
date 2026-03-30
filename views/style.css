@@ -197,3 +197,6 @@ body {
 }
 /* Add this temporary line for testing */
 /* git update test */
+body {
+    background-color: hotpink; /* temporary test color */
+}
