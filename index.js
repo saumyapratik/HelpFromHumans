@@ -5,12 +5,13 @@ const mongoose = require("mongoose");
 const app = express();
 // Serve static files (CSS, JS, images) from views folder
 app.use(express.static(path.join(__dirname, 'views')));
+
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // ---------- MongoDB Connection ----------
-mongoose.connect("mongodb+srv://saumya09638_db_user:VgYMIIbZy7Hmiqqa@cluster0.vcbqxox.mongodb.net/HelpFromHumans?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://saumya09638_db_user:78MIsdK2RmqO4Naq@cluster0.vcbqxox.mongodb.net/HelpFromHumans?retryWrites=true&w=majority")
 .then(() => console.log("MongoDB connected ✅"))
 .catch(err => console.log("MongoDB ERROR ❌", err));
 
@@ -206,7 +207,7 @@ app.post("/answer", async (req, res) => {
     }
 });
 
-// ---------- START SERVER (IMPORTANT FIX) ----------
+// ---------- START SERVER ----------
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
