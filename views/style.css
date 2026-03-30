@@ -1,3 +1,7 @@
+body {
+    background-color: hotpink; /* temporary test */
+}
+
 :root {
   --primary: #4CAF50; /* green */
   --secondary: #FFA500; /* orange */
