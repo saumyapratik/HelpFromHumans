@@ -1,0 +1,5 @@
+System started
+ERROR: disk issue detected
+User login successful
+WARNING: low memory
+error: failed to load module

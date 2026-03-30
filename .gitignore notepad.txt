@@ -1,5 +1,45 @@
-node_modules
-.env
-git add .
-git commit -m "First commit"
-
+I performed this part of the project on my laptop using WSL 
+(Windows Subsystem for Linux) since I use Windows 11. WSL 
+provides a real Ubuntu environment inside Windows which 
+allowed me to properly install and test everything as required. I 
+opened Ubuntu from the Start menu updated the system and then 
+performed all the steps. 
+Python is very common on Linux systems. Most distributions such 
+as Ubuntu, Fedora and Mint already include Python 3 by default. It 
+is widely used for scripting, automation and application 
+development because it is simple and works well with Linux 
+commands. 
+Installation Method 
+Python is usually pre-installed but it can also be installed using 
+package managers:- 
+• On Ubuntu/Debian: sudo apt install python3  
+• On Fedora/Red Hat: sudo dnf install python3  
+I used sudo apt install python3 in my WSL Ubuntu and it installed 
+quickly without needing any manual setup. Compiling from source 
+is generally not required unless a specific version is needed. 
+Key Directories 
+After installation Python is located in standard Linux directories: 
+• /usr/bin/python3 → main executable  
+• /usr/lib/python3 → standard libraries  
+• /usr/lib/python3/dist-packages → additional installed packages  
+Python does not maintain large configuration or log files like 
+services do. It works as a tool rather than a background process. 
+User and Group 
+Python runs under the current logged-in user. This improves 
+security because it only has the permissions of that user and cannot 
+modify system files without proper access. 
+Service Management 
+Python itself is not a service. It runs only when commands are 
+executed. However, Python-based applications can be configured 
+as services using systemd if needed. For this project, I only used 
+Python as a command-line tool. 
+Update Model 
+Python updates are handled through the Linux package manager. I 
+used: 
+• sudo apt update  
+• sudo apt upgrade  
+These commands install updates and security patches from Ubuntu 
+repositories. 
+Overall Python works smoothly on Linux. It is lightweight, secure 
+and easy to manage which makes it a very practical open-source 
+tool.

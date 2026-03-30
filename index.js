@@ -31,7 +31,7 @@ const User = mongoose.model("User", userSchema);
 
 // --- Question Schema ---
 const questionSchema = new mongoose.Schema({
-    username: string,
+    username: String,
     title: String,
     question: String,
     date: {
