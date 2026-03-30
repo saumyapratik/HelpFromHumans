@@ -3,7 +3,8 @@ const path = require("path");
 const mongoose = require("mongoose");
 
 const app = express();
-
+// Serve static files (CSS, JS, images) from views folder
+app.use(express.static(path.join(__dirname, 'views')));
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
