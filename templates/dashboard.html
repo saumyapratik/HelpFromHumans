@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - HelpFromHumans</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Welcome user -->
+  <h2 style="text-align:center;">Welcome {{ session['user'] }}</h2>
+
+  <!-- Hero Section for Dashboard -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to HelpFromHumans 🚀</h1>
+      <p>Your personal dashboard to ask and view questions.</p>
+
+      <div class="hero-buttons">
+        <a href="/ask" class="btn btn-primary">Ask Question</a>
+        <a href="/" class="btn btn-secondary">Home</a>
+      </div>
+
+      <!-- 🔥 Ask Question Form -->
+      <div style="margin-top: 30px;">
+        <form action="/ask" method="POST">
+          <textarea name="question" placeholder="Ask something..." 
+                    style="width: 100%; height: 100px; padding: 10px;" required></textarea>
+          <br><br>
+          <button type="submit" class="btn btn-primary">Post Question</button>
+        </form>
+      </div>
+
+      <!-- 🔥 All Questions -->
+      <h3>All Questions</h3>
+      {% for q in questions %}
+        <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+          <p><b>{{ q.user }}</b> asked:</p>
+          <p>{{ q.question }}</p>
+
+          <!-- 🗑️ Delete Button (only for owner) -->
+          {% if q.user == session['user'] %}
+          <form action="/delete/{{ q.id }}" method="POST" style="display:inline;">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+          {% endif %}
+
+          <!-- 🔥 Show answers -->
+          <div style="margin-left:20px; margin-top:10px;">
+            {% for ans in q.answers %}
+              <p><b>{{ ans.user }}</b>: {{ ans.answer }}</p>
+            {% endfor %}
+          </div>
+
+          <!-- 🔥 Answer Form -->
+          <form action="/answer/{{ q.id }}" method="POST" style="margin-top:10px;">
+            <input type="text" name="answer" placeholder="Write answer..." required style="width:80%; padding:5px;">
+            <button type="submit" class="btn btn-primary">Reply</button>
+          </form>
+        </div>
+      {% endfor %}
+
+    </div>
+  </section>
+
+</body>
+</html>

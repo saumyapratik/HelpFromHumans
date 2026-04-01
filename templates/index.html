@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HelpFromHumans - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      color: #333;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-card {
+      background-color: #ffffff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 750px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-card h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #1e3c72;
+    }
+
+    .login-card p {
+      font-size: 1em;
+      margin-bottom: 25px;
+      color: #1e3c72aa;
+    }
+
+    .login-card .btn {
+      text-decoration: none;
+      padding: 12px 30px;
+      margin: 10px 5px;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background-color: #1e3c72;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #3a579d;
+    }
+
+    .btn-secondary {
+      background-color: #fff;
+      color: #1e3c72;
+      border: 2px solid #1e3c72;
+    }
+
+    .btn-secondary:hover {
+      background-color: #1e3c72;
+      color: #fff;
+    }
+
+    .login-card .options {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-card .options a {
+      color: #1e3c72;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .login-card .options a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      color: #1e3c72aa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <h1>Welcome to HelpFromHumans!</h1>
+    <p>Your friendly Q&A platform to ask, answer, and learn from humans like you.</p>
+    
+    <a href="/signup" class="btn btn-primary">Sign Up</a>
+    <a href="/login" class="btn btn-secondary">Login</a>
+
+    <div class="options">
+      <a href="#">Forgot Password?</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 HelpFromHumans | Made by S Pratik
+  </div>
+
+</body>
+</html>

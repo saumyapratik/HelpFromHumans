@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Question - HelpFromHumans</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container" style="max-width:600px; margin:50px auto;">
+        <h1>Ask a Question</h1>
+        <form action="/ask" method="POST">
+            <textarea name="question" placeholder="Write your question here..." required
+                      style="width:100%; height:150px; padding:10px; margin-bottom:10px;"></textarea>
+            <button type="submit" class="btn w-100">Post Question</button>
+        </form>
+        <p style="text-align:center; margin-top:10px;">
+            <a href="/dashboard">Back to Dashboard</a>
+        </p>
+    </div>
+</body>
+</html>
